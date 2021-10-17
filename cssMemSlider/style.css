@@ -1,40 +1,111 @@
 
-/*Обнуление*/
-*{
+* {
     padding: 0;
     margin: 0;
     border: 0;
 }
-*,*:before,*:after{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+
+body{
+    background-color: slategray;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
 
-nav,footer,header,aside{display: block;}
+.slider{
+        width: 1100px;
+        height: 600px;
+        overflow: hidden;
+    border: 10px solid #fff;
+    display: flex;
+    flex-direction: column;
+}
+.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-html,body{
-    height: 100%;
+.navigation{
+    display: flex;
+
+}
+
+.bar{
+    height: 16px;
+    width: 16px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #1a4d78;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+.slider_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bar:hover{
+    background-color: white;
+}
+
+.bar:active{
+    background-color: white;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 80%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;
+}
+
+
+.slide img{
     width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    height: 100%;
+
 }
-input,button,textarea{font-family:inherit;}
+.citates{
+    width: 400%;
+    height: 80%;
+    display: flex;
+}
 
-input::-ms-clear{display: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul li{list-style: none;}
-img{vertical-align: top;}
+.citate{
+    width: 25%;
+    transition: all .6s ease;
+}
 
-h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
-/*--------------------*/
+#r1:checked ~ .slider .slides .s1,
+#r1:checked ~ .slider .citates  .l1
+{
+    margin-left: 0;
+}
+
+#r2:checked ~ .slider .slides .s1,
+#r2:checked ~ .slider .citates  .l1
+{
+    margin-left: -25%;
+}
+
+#r3:checked ~ .slider .slides .s1,
+#r3:checked ~ .slider .citates  .l1
+{
+    margin-left: -50%;
+}
+
+#r4:checked ~ .slider .slides .s1,
+#r4:checked ~ .slider .citates  .l1
+{
+    margin-left: -75%;
+}
 
