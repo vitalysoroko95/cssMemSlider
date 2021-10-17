@@ -20,7 +20,6 @@ body {
 }
 
 .middle {
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,13 +35,15 @@ body {
 .bar {
     height: 1rem;
     width: 1rem;
-    margin: 0.5rem;
     cursor: pointer;
+    margin: 0.5rem;
     background-color: #1a4d78;
     border-radius: 0.8rem;
     transition: all .4s ease;
 }
-
+.bar span{
+    padding: 0.5rem;
+}
 .slider_bottom {
     display: flex;
     flex-direction: row;
@@ -71,7 +72,7 @@ input[name="r"] {
     transition: all .6s ease;
 }
 label{
-    display: block;
+
 }
 
 .slide img {
@@ -85,7 +86,7 @@ label{
     height: 80%;
     display: flex;
     font-family: "Berlin Sans FB";
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 .bottom {
@@ -99,7 +100,7 @@ label{
 }
 
 .cit_bar {
-    min-height: 2rem;
+    min-height: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -161,4 +162,12 @@ label{
         align-items: center;
         row-gap: 1rem;
     }
+    .signatures {
+        width: 400%;
+        height: 80%;
+        display: flex;
+        font-family: "Berlin Sans FB";
+        font-size: 1em;
+    }
+
 }
