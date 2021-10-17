@@ -1,0 +1,173 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    background-color: slategray;
+}
+
+.slider {
+    min-width: 25rem;
+    height: 70%;
+    overflow: hidden;
+    border: 0.8rem solid #fff;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    display: flex;
+
+
+}
+
+.bar {
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    background-color: #1a4d78;
+    border-radius: 0.8rem;
+    transition: all .4s ease;
+}
+.bar span{
+    padding: 0.5rem;
+}
+.slider_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bar:hover {
+    background-color: white;
+    opacity: .5;
+}
+
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 80%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: all .6s ease;
+}
+label{
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+
+}
+
+.signatures {
+    width: 400%;
+    height: 80%;
+    display: flex;
+    font-family: "Berlin Sans FB";
+    font-size: 2em;
+}
+
+.bottom {
+    width: 100%;
+    overflow: hidden;
+}
+
+.signature {
+    width: 25%;
+    transition: all 0.1s ease;
+}
+
+.cit_bar {
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 0.8rem;
+    align-items: center;
+}
+
+#r1:checked ~ .slider .slides .s1,
+#r1:checked ~ .slider .signatures .l1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .slider .slides .s1,
+#r2:checked ~ .slider .signatures .l1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .slider .slides .s1,
+#r3:checked ~ .slider .signatures .l1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .slider .slides .s1,
+#r4:checked ~ .slider .signatures .l1 {
+    margin-left: -75%;
+}
+
+#r1:checked ~ .slider .navigation label:nth-child(1) {
+    background: rgb(61, 61, 61);
+}
+
+#r2:checked ~ .slider .navigation label:nth-child(2) {
+    background: rgb(61, 61, 61);
+}
+
+#r3:checked ~ .slider .navigation label:nth-child(3) {
+    background: rgb(61, 61, 61);
+}
+
+#r4:checked ~ .slider .navigation label:nth-child(4) {
+    background: rgb(61, 61, 61);
+}
+
+@media (max-width: 420px){
+    .slider {
+
+    }
+
+
+
+
+    .cit_bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding: 0 10px;
+        align-items: center;
+        row-gap: 1rem;
+    }
+    .signatures {
+        width: 400%;
+        height: 80%;
+        display: flex;
+        font-family: "Berlin Sans FB";
+        font-size: 1em;
+    }
+
+}
